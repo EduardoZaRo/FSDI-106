@@ -43,7 +43,7 @@ function saveTask(){
 
     $.ajax({
         type: 'POST',
-        url: "http://fsdiapi.azurewebsites.net/api/tasks/",
+        url: "https://fsdiapi.azurewebsites.net/api/tasks/",
         data: JSON.stringify(task),
         contentType: 'application/json',
         
@@ -81,7 +81,7 @@ function displayTask(task){
 function loadTask(){
     $.ajax({
         type: "GET",
-        url: "http://fsdiapi.azurewebsites.net/api/tasks",
+        url: "https://fsdiapi.azurewebsites.net/api/tasks",
         success:  function(res){
             let data = JSON.parse(res);
             console.log(data);
